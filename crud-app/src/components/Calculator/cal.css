@@ -1,0 +1,50 @@
+.container {
+  /* width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* background: linear-gradient(140deg, blue, gray); */
+}
+
+.cal-body {
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+}
+form input {
+  border: none;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  background-color: rgb(98, 98, 142);
+  margin: 2px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+form input[type="button"]:hover {
+  background: rgb(118, 58, 174);
+}
+
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0px 15px 0px;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 40px;
+  padding: 5px 10px;
+  color: rgb(98, 98, 142);
+  background: white;
+  border: 3px solid black;
+}
+
+form .equal {
+  width: 125px;
+}
