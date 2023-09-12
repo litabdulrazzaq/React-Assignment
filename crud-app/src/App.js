@@ -7,6 +7,9 @@ import ReadOperation from "./components/ReadOperation";
 import UpdateOperation from "./components/EditOperation";
 import Calculator from "./components/Calculator/Calculator";
 import DataTable from "./components/DataTable/DataTable";
+import TextClick from "./components/ClickText/TextClick";
+import DrowpDown from "./components/ClickText/DrowpDown";
+import ShowDropDown from "./components/ClickText/ShowDropDown";
 function App() {
   return (
     <div className="App">
@@ -19,7 +22,7 @@ function App() {
           <Route path="/edit" element={<UpdateOperation />} />
         </Routes>
       </BrowserRouter> */}
-      <DataTable />
+      <ShowDropDown />
     </div>
   );
 }
