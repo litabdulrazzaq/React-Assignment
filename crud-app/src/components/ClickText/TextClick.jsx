@@ -5,6 +5,7 @@ import "./textclick.css";
 
 const TextClick = () => {
   const [clickedText, setClickedText] = useState("");
+  const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0 });
   const [popoverOpen, setPopoverOpen] = useState(false);
 
   // Object to store content for each name
@@ -46,14 +47,30 @@ const TextClick = () => {
               {name}
             </p>
           ))}
-          <Popover
-            placement="bottom"
-            isOpen={popoverOpen}
-            target="PopoverClick" // This should match the 'id' of the paragraph
-            toggle={handleTextClick}
+          <div
+            onClick={(e) => {
+              setPopoverPosition({ top: e.clientY, left: e.clientX });
+            }}
           >
-            <PopoverBody>{clickedText}</PopoverBody>
-          </Popover>
+            <Popover
+              id="f3w"
+              anchorReference="anchorPosition"
+              anchorPosition={{ top: 20, left: 30 }}
+              isOpen={popoverOpen}
+              anchorOrigin={{
+                vertical: "center",
+                horizontal: "left",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              target="PopoverClick" // This should match the 'id' of the paragraph
+              toggle={handleTextClick}
+            >
+              <PopoverBody>{clickedText}</PopoverBody>
+            </Popover>
+          </div>
         </div>
         <div className="col-md-3 col-4 bg-info py-5 fs-2 fw-bolder">
           {/* Display the clicked text on the other side */}

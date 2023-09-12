@@ -10,6 +10,7 @@ import DataTable from "./components/DataTable/DataTable";
 import TextClick from "./components/ClickText/TextClick";
 import DrowpDown from "./components/ClickText/DrowpDown";
 import ShowDropDown from "./components/ClickText/ShowDropDown";
+import ColorPicker from "./components/ColorPicker/ColorPiker";
 function App() {
   return (
     <div className="App">
@@ -22,7 +23,7 @@ function App() {
           <Route path="/edit" element={<UpdateOperation />} />
         </Routes>
       </BrowserRouter> */}
-      <ShowDropDown />
+      <ColorPicker />
     </div>
   );
 }
