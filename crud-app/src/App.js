@@ -23,7 +23,7 @@ function App() {
           <Route path="/edit" element={<UpdateOperation />} />
         </Routes>
       </BrowserRouter> */}
-      <ColorPicker />
+      <DataTable />
     </div>
   );
 }
